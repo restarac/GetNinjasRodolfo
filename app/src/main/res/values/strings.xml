@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GetNinjas - Rodolfo</string>
+    <string name="default_whatsapp_message">Olá, vi seu anuncio no getNinjas, vamos conversar sobre ele</string>
+    <string name="whatsapp_package_name">com.whatsapp</string>
+    <string name="aceite_o_pedido">Aceite o pedido para destravar o contato!</string>
+    <string name="fale_com_o_cliente">Fale com o Cliente o quanto antes</string>
+</resources>

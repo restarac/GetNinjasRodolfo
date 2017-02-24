@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_light"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/item_details_background"
+        android:orientation="vertical">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="140dp" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/left_padding_10"
+        style="@style/highlightText"
+        android:text="Buffet completo"
+        android:textSize="20sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@id/title"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="@dimen/left_padding_10"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/linha_tracejada"
+        android:layerType="software" />
+
+        <TextView
+            android:id="@+id/usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/left_padding_10"
+            android:text="Usuario"
+            android:drawableLeft="@drawable/ic_user_silhouette"
+            android:layout_marginBottom="5dp"
+            style="@style/highlightText"
+            />
+
+        <TextView
+            android:id="@+id/local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:paddingLeft="@dimen/left_padding_10"
+            android:text="Vila Leopoldina - São Paulo"
+            android:drawableLeft="@drawable/ic_location"
+            style="@style/highlightText" />
+
+        <TextView
+            android:id="@+id/distanciaUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="@dimen/left_padding_10"
+            android:layout_marginLeft="35dp"
+            android:text="a 10 km de voce"
+             />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/title"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/linha_tracejada"
+            android:layerType="software" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/informacoesAdicionais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/left_padding_10"
+            android:nestedScrollingEnabled="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/left_padding_10"
+            style="@style/highlightText"
+            android:text="Contato do Cliente"
+            android:layout_marginTop="15dp"
+            android:background="@color/blue"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/left_padding_10"
+            android:drawableLeft="@drawable/ic_phone"
+            android:text="119879-546548"
+            android:background="@color/blue"
+            style="@style/highlightText"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_email"
+            android:text="teste@getninjas.com.br"
+            android:paddingLeft="@dimen/left_padding_10"
+            android:background="@color/blue"
+            style="@style/highlightText"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aceite_o_pedido"
+            android:paddingLeft="@dimen/left_padding_10"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"
+            style="@style/highlightText"
+            />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/decline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:drawableLeft="@drawable/ic_decline"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="RECUSAR"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/blue_light"
+            android:textStyle="bold" />
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/blue_light"
+    android:layout_width="1dp"
+    android:layout_height="wrap_content"></View>
+
+        <TextView
+            android:id="@+id/accept"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:drawableLeft="@drawable/ic_checked"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:text="ACEITAR"
+            android:textColor="@color/blue_light"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>
